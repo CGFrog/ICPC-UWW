@@ -8,4 +8,4 @@ for x in input().split():
     a = int(x) // d;
     q[a] = q.get(a, 0) + 1
 
-print(sum([(q[s] * (q[s] - 1))//2 for s in q]))
+print(sum([math.perm(q[s], 2) for s in q]))
